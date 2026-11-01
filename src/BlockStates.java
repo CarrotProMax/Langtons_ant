@@ -1,6 +1,6 @@
 public class BlockStates{
     private boolean light;//当前格子的状态
-    public BlockStates(){
+    public BlockStates(){//构造方法默认格子是黑色的
          light = false;
     }
     public BlockStates(boolean light){

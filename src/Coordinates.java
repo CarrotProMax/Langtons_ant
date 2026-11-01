@@ -22,21 +22,21 @@ public class Coordinates {
         this.Y=Y;
     }
     @Override
-    public int hashCode(){
+    public int hashCode(){//重写哈希值计算方法，因为原来的方法是随机赋值
         int result = 1;
         result = 31 * result + X;
         result = 31 * result + Y;
-        return result;
+        return result;//这里网上搜的说没有默认的hash写法，不过大家都这么写，我也这么写了O_o
     }
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean equals(Object obj) {//重写比较方法
+        if (this == obj) {//判断传入类是不是自己
             return true;
         }
-        if (obj == null) {
+        if (obj == null) {//判断传入值是否为null
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass() != obj.getClass()) {//判断类型是不是相同
             return false;
         }
         Coordinates other = (Coordinates) obj;

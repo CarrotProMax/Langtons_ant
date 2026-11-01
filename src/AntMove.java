@@ -1,4 +1,3 @@
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 
 public class AntMove{
     int antPoint;//1是指向上，2是指向右，3是指向下，4是指向左
@@ -18,11 +17,11 @@ public class AntMove{
             default: System.out.print("方向范围越界");break;
         }
     }
-    public void TurnRight(){
+    public void TurnRight(){//显然是右转
         if(antPoint==4){antPoint=1;}
         else{antPoint=antPoint+1;}
     }
-    public void TurnLeft(){
+    public void TurnLeft(){//显然是左转
         if(antPoint==1){antPoint=4;}
         else{antPoint=antPoint-1;}
     }
