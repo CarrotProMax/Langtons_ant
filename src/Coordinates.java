@@ -5,6 +5,10 @@ public class Coordinates {
         X=0;
         Y=0;
     }
+    public Coordinates(int X,int Y){
+        this.X=X;
+        this.Y=Y;
+    }
     public int getX(){
         return X;
     }
