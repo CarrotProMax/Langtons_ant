@@ -3,6 +3,9 @@ public class BlockStates{
     public BlockStates(){
          light = false;
     }
+    public BlockStates(boolean light){
+        this.light = true;
+    }
     public void blockStatesAlter(){//将当前格子的状态反转
         light = !light;
     }

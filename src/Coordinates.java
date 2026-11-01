@@ -21,4 +21,25 @@ public class Coordinates {
     public void setY(int Y){
         this.Y=Y;
     }
+    @Override
+    public int hashCode(){
+        int result = 1;
+        result = 31 * result + X;
+        result = 31 * result + Y;
+        return result;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Coordinates other = (Coordinates) obj;
+        return this.X == other.X && this.Y == other.Y;  //只对 X、Y进行比较
+    }
 }
