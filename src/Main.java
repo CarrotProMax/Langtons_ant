@@ -17,11 +17,12 @@ public class Main{
                 }
                 map.get(antMove.coordinates).blockStatesAlter();//反转格子的颜色
             }else {
-                map.put(antMove.coordinates, new BlockStates());//创建新的格子
+                map.put(new Coordinates(antMove.coordinates.getX(),antMove.coordinates.getY()), new BlockStates());//创建新的格子
                 antMove.TurnLeft();//默认是黑色的所以直接左转
             }
-            Thread.sleep(50);
+            //nowPrint(antMove);
         }
+        System.out.println();
         //要打印的白色格子：    █·
     }
     public static void nowPrint(AntMove antMove){
